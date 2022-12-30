@@ -9,10 +9,13 @@ const { loadFixture } = require("@nomicfoundation/hardhat-network-helpers");
 describe("MyMessage contract", function() {
 
   async function deployContract() {
+    // Get accounts
     const [owner, addr1] = await ethers.getSigners();
+    // Get contract and deploy it
     const MyMessage = await ethers.getContractFactory("MyMessage");
     const myMessageContract = await MyMessage.deploy("Hey it's my message!");
     await myMessageContract.deployed();
+    // Return variables
     return {myMessageContract, owner, addr1};
   }
 
