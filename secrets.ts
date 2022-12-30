@@ -1,0 +1,3 @@
+export const ALCHEMY_API_KEY = "YOUR_API_KEY";
+export const PRIVATE_KEY = "YOUR_PRIVATE_KEY";
+export const ETHERSCAN_API_KEY = "YOUR_API_KEY";
