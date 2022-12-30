@@ -16,8 +16,8 @@ contract MyMessage is Ownable {
         message = _message;
     }
 
-    function getMessage() external view returns (string memory) {
-        return message;
+    function destroy() external onlyOwner {
+        selfdestruct(payable(owner()));
     }
 
 }
